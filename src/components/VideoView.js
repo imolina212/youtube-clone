@@ -1,6 +1,6 @@
 import React from "react";
 import YouTube from "react-youtube";
-// import comments from "./components/comments"
+// import Comments from "./components/Comments.js"
 
 class VideoLink extends React.Component {
     constructor(props) {
@@ -22,7 +22,7 @@ class VideoLink extends React.Component {
             <YouTube videoId={videoId} opts={opts}/>
             <p>{title}</p>
             
-            {/* <comments /> */}
+            {/* <Comments /> */}
         </div>
     )
 }
