@@ -1,5 +1,6 @@
 import React from "react";
 import VideoCard from "./VideoCard";
+import { Link } from "react-router-dom";
 
 
 class Home extends React.Component {
@@ -66,11 +67,10 @@ class Home extends React.Component {
         <button 
         type="submit">Search</button>
         </form>
-        {videosToDisplay}
+        <Link to="/videos/:id">{videosToDisplay}</Link>
       </div>
     );
   }
 }
-        
         
 export default Home;
