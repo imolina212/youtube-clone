@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Share from "./Share";
 import "../Comments.css";
 
 class Comments extends Component {
@@ -72,6 +73,7 @@ class Comments extends Component {
             );
           })}
         </ul>
+        <Share />
       </div>
     );
   }
