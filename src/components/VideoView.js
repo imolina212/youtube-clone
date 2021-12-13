@@ -18,5 +18,4 @@ const VideoView = () => {
     )
 }
 
-
-export default VideoView; 
+export default VideoView;

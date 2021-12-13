@@ -1,6 +1,6 @@
 import React from "react";
 import VideoCard from "./VideoCard";
-
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -9,8 +9,8 @@ class Home extends React.Component {
     this.state = {
       userInput: "",
       results: "",
-      videos: []
-    }
+      videos: [],
+    };
   }
 
   handleUserInput = (event) => {
@@ -39,8 +39,9 @@ class Home extends React.Component {
         userInput: "",
       })
     })
+
   }
-    static getDerivedStateFromProps(props, state) {
+  static getDerivedStateFromProps(props, state) {
     return {
       results: props.clear ? [] : state.results,
       videos: props.clear ? [] : state.videos,
@@ -75,6 +76,5 @@ class Home extends React.Component {
     );
   }
 }
-        
-        
+
 export default Home;
