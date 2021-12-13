@@ -1,3 +1,15 @@
-form {
-    margin: auto;
+form .search-bar {
+    margin: 30px;
+}
+
+button {
+background-color: red;
+}
+
+div .video-list p {
+    background-color: grey;
+}
+
+.no-results {
+    background-color: gray;
 }

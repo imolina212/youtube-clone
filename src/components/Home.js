@@ -2,14 +2,14 @@ import React from "react";
 import VideoCard from "./VideoCard";
 
 class Home extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       userInput: "",
       results: "",
-      videos: []
-    }
+      videos: [],
+    };
   }
 
   // handleTweet = () => {
@@ -21,21 +21,19 @@ class Home extends React.Component {
   handleUserInput = (event) => {
     this.setState({
       userInput: event.target.value,
-    })
-  }
+    });
+  };
 
   handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({
       results: this.state.userInput,
-    })
-    this.fetchVideos()
-  }
-  
+    });
+    this.fetchVideos();
+  };
+
   fetchVideos() {
-    // console.log("Success")
-    if(this.state.userInput === 0) return;
-    this.props.disableClear()
+    if (this.state.userInput === 0) return;
 
     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
     .then(res => res.json())
@@ -48,6 +46,7 @@ class Home extends React.Component {
     }).catch((error) => {
       console.error(error)
     })
+
   }
   
     static getDerivedStateFromProps(props, state) {
@@ -81,5 +80,5 @@ class Home extends React.Component {
     );
   }
 }
-        
+
 export default Home;

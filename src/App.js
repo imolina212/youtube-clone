@@ -1,12 +1,12 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route , Navigate, useNavigate} from "react-router-dom";
 import React from "react";
 
 /** COMPONENTS */
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
-import VideoView from "./components/VideoView"
+import VideoView from "./components/VideoView";
 
 class App extends React.Component {
   constructor(props) {
