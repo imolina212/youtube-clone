@@ -6,7 +6,7 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
-import Comments from "./components/Comments";
+import VideoView from "./components/VideoView"
 
 class App extends React.Component {
   constructor(props) {
@@ -34,8 +34,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar onClear={this.clearState} />
-        <Comments />
-        {/* <Routes>
+        <Routes>
           <Route
             exact
             path="/"
@@ -44,7 +43,8 @@ class App extends React.Component {
             }
           />
           <Route path="/about" element={<About />} />
-        </Routes> */}
+          <Route path="/videos/:id" element={<VideoView />} />
+        </Routes>
       </div>
     );
   }

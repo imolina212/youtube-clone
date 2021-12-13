@@ -4,18 +4,19 @@ import { useParams } from "react-router-dom";
 import Comments from "./Comments";
 
 const VideoView = () => {
-  console.log(useParams());
-  const opts = {
-    height: "390",
-    width: "640",
-  };
-  let vidParam = useParams();
-  return (
-    <div>
-      <YouTube videoId={vidParam.id} opts={opts} />
-      <Comments />
-    </div>
-  );
-};
+
+      console.log(useParams())
+        const opts = {
+            height: '390',
+            width: '640',
+        }
+        let vidParam = useParams()
+    return (
+        <div>
+            <YouTube videoId={vidParam.id} opts={opts}/>
+            <Comments />
+        </div>
+    )
+}
 
 export default VideoView;
