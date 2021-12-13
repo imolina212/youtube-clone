@@ -1,7 +1,7 @@
 import React from "react";
 import YouTube from "react-youtube";
 import { useParams } from "react-router-dom";
-// import Comments from "./Comments";
+import Comments from "./Comments";
 
 const VideoView = () => {
       console.log(useParams())
@@ -13,6 +13,7 @@ const VideoView = () => {
     return (
         <div>
             <YouTube videoId={vidParam.id} opts={opts}/>
+            <Comments />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import VideoCard from "./VideoCard";
+import { Link } from "react-router-dom";
 
 
 class Home extends React.Component {
@@ -30,7 +31,7 @@ class Home extends React.Component {
   fetchVideos() {
     if (this.state.userInput === 0) return;
 
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
     .then(res => res.json())
     .then((data) => {
       //  console.log(data)
@@ -65,11 +66,10 @@ class Home extends React.Component {
           <button type="submit">Search</button>
           <p>{this.state.results}</p>
         </form>
-        {videosToDisplay}
+        <Link to="/videos/:id">{videosToDisplay}</Link>
       </div>
     );
   }
 }
-        
         
 export default Home;

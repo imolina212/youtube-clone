@@ -6,7 +6,8 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
-import Comments from "./components/comments";
+import VideoView from "./components/VideoView"
+
 
 class App extends React.Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class App extends React.Component {
           />
 
           <Route path="/about" element={<About />} />
+          <Route path="/videos/:id" element={<VideoView />} />
         </Routes>
       </div>
     );
