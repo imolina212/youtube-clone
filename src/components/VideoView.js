@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Comments from "./Comments";
 
 const VideoView = () => {
+
       console.log(useParams())
         const opts = {
             height: '390',
@@ -18,5 +19,4 @@ const VideoView = () => {
     )
 }
 
-
-export default VideoView; 
+export default VideoView;
