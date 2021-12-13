@@ -1,12 +1,12 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route , Navigate, useNavigate} from "react-router-dom";
 import React from "react";
 
 /** COMPONENTS */
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
-import Comments from "./components/comments";
+import VideoView from "./components/VideoView";
 
 class App extends React.Component {
   constructor(props) {
@@ -35,15 +35,15 @@ class App extends React.Component {
       <div className="App">
         <NavBar onClear={this.clearState} />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <Home clear={this.state.clear} disableClear={this.disableClear} />
-            }
-          />
-
-          <Route path="/about" element={<About />} />
+            <Route
+              exact
+              path="/"
+              element={
+                <Home clear={this.state.clear} disableClear={this.disableClear} />
+              }
+            />
+            <Route path="/about" element={<About />} />
+            <Route path="/videos/:id" element={<VideoView />}/>
         </Routes>
       </div>
     );

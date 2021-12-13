@@ -30,7 +30,7 @@ class Home extends React.Component {
   fetchVideos() {
     if (this.state.userInput === 0) return;
 
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
     .then(res => res.json())
     .then((data) => {
       //  console.log(data)
@@ -49,23 +49,28 @@ class Home extends React.Component {
 
   render() {
     const videosToDisplay = this.state.videos.map((video, i) => {
-      return <VideoCard vid={video} key={i} />;
+      console.log(video)
+      return (<VideoCard vid={video} key={i} />);
     });
-
+    
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            id="search"
-            value={this.state.userInput}
-            onChange={this.handleUserInput}
-          />
-          <button type="submit">Search</button>
-          <p>{this.state.results}</p>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Search..."
+              id="search"
+              value={this.state.userInput}
+              onChange={this.handleUserInput}
+            />
+            <button type="submit">Search</button>
+          </div>
         </form>
-        {videosToDisplay}
+        <div className="video-list">
+          {videosToDisplay.length === 0 ? <p className="no-results">No Search Results Yet!</p> : <div className="search-results">
+            {videosToDisplay}</div>}
+        </div>
       </div>
     );
   }
