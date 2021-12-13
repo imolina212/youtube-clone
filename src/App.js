@@ -13,7 +13,6 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      youtubeAPI: [],
       clear: false,
     };
   }
@@ -35,12 +34,9 @@ class App extends React.Component {
       <div className="App">
         <NavBar onClear={this.clearState} />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <Home clear={this.state.clear} disableClear={this.disableClear} />
-            }
+          <Route exact path="/" element={
+            <Home clear={this.state.clear} disableClear={this.disableClear} />
+          }
           />
 
           <Route path="/about" element={<About />} />

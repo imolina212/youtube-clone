@@ -1,7 +1,5 @@
 import React from "react";
 import VideoCard from "./VideoCard";
-import { Link } from "react-router-dom";
-
 
 class Home extends React.Component {
   constructor(props){
@@ -13,6 +11,12 @@ class Home extends React.Component {
       videos: []
     }
   }
+
+  // handleTweet = () => {
+//    this.setState({
+  //    results: 
+// })
+  // }
 
   handleUserInput = (event) => {
     this.setState({
@@ -33,42 +37,47 @@ class Home extends React.Component {
     if(this.state.userInput === 0) return;
     this.props.disableClear()
 
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
     .then(res => res.json())
     .then((data) => {
-      //  console.log(data)
+       console.log(data)
       this.setState({
         videos: data.items,
         userInput: "",
       })
+    }).catch((error) => {
+      console.error(error)
     })
   }
+  
     static getDerivedStateFromProps(props, state) {
     return {
-      results: props.clear ? [] : state.results,
       videos: props.clear ? [] : state.videos,
     };
   }
 
   render() {
     const videosToDisplay = this.state.videos.map((video, i) => {
-      return (<VideoCard vid={video} key={i} />);
+      return (
+        <VideoCard vid={video} key={i} />
+      )
     });
-    
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input 
+          <div className="search-bar">
+            <input 
         type="text" 
         placeholder="Search..." 
         id="search" 
         value={this.state.userInput}
         onChange={this.handleUserInput} />
-        <button 
-        type="submit">Search</button>
+        <button type="submit">Search</button>
+            </div>
         </form>
-        <Link to="/videos/:id">{videosToDisplay}</Link>
-      </div>
+        {videosToDisplay.length == 0 ? <p className="search">No Search Results Yet!, Please submit a search above!</p> : videosToDisplay}
+        </div>
     );
   }
 }
