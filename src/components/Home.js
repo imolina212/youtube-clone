@@ -1,5 +1,6 @@
 import React from "react";
 import VideoCard from "./VideoCard";
+import "../home.css"
 
 class Home extends React.Component {
   constructor(props) {
@@ -66,17 +67,26 @@ class Home extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <div className="search-bar">
-            <input 
-        type="text" 
-        placeholder="Search..." 
-        id="search" 
-        value={this.state.userInput}
-        onChange={this.handleUserInput} />
-        <button type="submit">Search</button>
-            </div>
+            <input
+              type="text"
+              placeholder="Search..."
+              id="search"
+              value={this.state.userInput}
+              onChange={this.handleUserInput}
+            />
+            <button type="submit" id="search-btn">Search</button>
+          </div>
         </form>
-        {videosToDisplay.length == 0 ? <p className="search">No Search Results Yet!, Please submit a search above!</p> : videosToDisplay}
+        <div className="search-results">
+          {videosToDisplay.length == 0 ? (
+            <p className="search">
+              No Search Results Yet!, Please submit a search above!
+            </p>
+          ) : <div className="vids">{videosToDisplay}</div>
+            
+          }
         </div>
+      </div>
     );
   }
 }

@@ -1,13 +1,19 @@
-div .search-results {
+/* div .search-results {
    display: grid;
    grid-template-columns: 1fr 1fr;
-}
 
-div .video-card {
-   margin: 50px
-}
+} */
+
+/* .video-card {
+   margin: 50px;
+}  */
 
 div img {
    height: 250px; 
    width: 400px;
+}
+
+.vids {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
 }

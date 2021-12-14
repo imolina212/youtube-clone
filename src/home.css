@@ -1,15 +1,14 @@
-form .search-bar {
-    margin: 30px;
+#search-btn {
+    background-color: red;
+    color:white;
+    width:100px;
+    height: 31px;
+    font-size: 20px;
+    border-radius: 5px;
 }
 
-button {
-background-color: red;
-}
-
-div .video-list p {
-    background-color: grey;
-}
-
-.no-results {
-    background-color: gray;
+#search {
+    height: 25px;
+    width: 50%;
+    border-radius: 5px;
 }
