@@ -12,10 +12,10 @@ class About extends React.Component {
         <h1 className="headings">Our Project</h1>
         <p className="bio">
           The fantastic four Dream Team joined forces to build this web app that
-          responsively changes based on what YouTube video interests a user. The
-          project uses and external API, that the team accessed and integrated
-          into the project - assisting in allowing users to search for, view,
-          and leave comments on videos. Enjoy!
+          responsively changes based on what YouTube video interests the user.
+          The project accesses and external API that the team integrated into
+          the app - allowing for users to search for, view, and leave comments
+          on videos. Enjoy!
         </p>
         <h1 className="headings" className="title">
           Meet The Dream Team
@@ -29,11 +29,11 @@ class About extends React.Component {
         </div>
         <a href={"https://github.com/imolina212"}>Check Him Out On Github!</a>
         <p className="bio">
-          Constantly challenging himself - Isidro is passionate about constantly
-          seeking ways to advance his skills as a software developer. He stays
-          on top of living a healthy lifestyle. In his time away from learning
-          new coding languages, he likes to go hiking and can also be spotted
-          relaxing with his family parrot, Drako! Current Favorite Youtube
+          Constantly challenging himself - Isidro is passionate about seeking
+          ways to advance his skills as a software developer. He stays on top of
+          living a healthy lifestyle. In his time away from learning new coding
+          languages, he likes to go hiking and can also be spotted relaxing with
+          his family parrot, Drako! Current Favorite Youtube
           Channel:laoshu505000. “If you talk to a man in a language he
           understands, it goes to his head. If you talk to him in his language,
           that goes to his heart.” -Nelson Mandela
@@ -51,6 +51,7 @@ class About extends React.Component {
           favorite aspects of application projects have been adding final
           details that takes the user interface to the next level or anything
           that will elevate a project from good to great. Fav Youtube Channel:
+          Pickle Rick
         </p>
 
         <h2> Justin Daniel Diaz</h2>
@@ -62,11 +63,11 @@ class About extends React.Component {
         </div>
         <a href="https://github.com/JustDDiaz">His Latest Projects! </a>
         <p className="bio">
-          Justin canon ball dives into coding challenges, and his spare time he
-          is a gamer - his favorite to play right now is Halo Infinite! Another
-          animal lover he eventually hopes to write code for a company that is
-          aligned with his vision for projects in the gaming industry. Fav
-          Channel: Jesse's Barbershop
+          Justin does a canon ball dive into coding challenges, and in his spare
+          time he enjoys video games - his favorite to play right now is Halo
+          Infinite! Another animal lover he eventually hopes to write code for a
+          company that is aligned with his vision for projects in the gaming
+          industry. Fav Channel: Jesse's Barbershop
         </p>
         <h2>Tashawnee G</h2>
         <div>
@@ -76,11 +77,11 @@ class About extends React.Component {
           What she's been up to on Github!
         </a>
         <p className="bio">
-          Aspiring to have a career that will allow her to teach others.
+          Aspiring to have a career that will allow her to teach others,
           Tashawnee G is aiming to learn as much as possible to educate the
-          minds of the future. She enjoys getting to know others better and in
-          her spare time she enjoys singing and cook-off shows. Favorite Youtube
-          Channel: Ellen and The Tonight Show
+          minds of the future. She enjoys getting to know people better and in
+          her spare time she binges singing and cook competition shows. Favorite
+          Youtube Channel: Ellen and The Tonight Show!
         </p>
       </div>
     );
