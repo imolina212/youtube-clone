@@ -2,7 +2,7 @@ import React from "react";
 import "../About.css";
 import Molina from "../Molina.png";
 import Justin from "../Justin.jpeg";
-import Kisha from "../Kisha.jpg";
+import Kisha2 from "../Kisha2.jpg";
 import tashawnee from "../tashawnee.jpg";
 
 class About extends React.Component {
@@ -17,7 +17,9 @@ class About extends React.Component {
           into the project - assisting in allowing users to search for, view,
           and leave comments on videos. Enjoy!
         </p>
-        <h1 className="headings">Meet The Dream Team</h1>
+        <h1 className="headings" className="title">
+          Meet The Dream Team
+        </h1>
         <h2> Isidro Molina</h2>
         <div>
           <img
@@ -38,7 +40,7 @@ class About extends React.Component {
         </p>
         <h2>Kisha J</h2>
         <div>
-          <img src={Kisha} alt="Spruce and Fur, Kisha J's kitties" />
+          <img src={Kisha2} alt="Kisha J, Spruce and Fur, Kisha J's kitties" />
         </div>
         <a href="https://github.com/https://github.com/lakishaJohnson">
           More On Kisha J!
@@ -74,7 +76,7 @@ class About extends React.Component {
           What she's been up to on Github!
         </a>
         <p className="bio">
-          Aspiring to gain a career that will allow her to teach others.
+          Aspiring to have a career that will allow her to teach others.
           Tashawnee G is aiming to learn as much as possible to educate the
           minds of the future. She enjoys getting to know others better and in
           her spare time she enjoys singing and cook-off shows. Favorite Youtube
