@@ -17,14 +17,13 @@ class About extends React.Component {
           the app - allowing for users to search for, view, and leave comments
           on videos. Enjoy!
         </p>
-        <h1 className="headings" className="title">
+        <h1 className="headings" >
           Meet The Dream Team
         </h1>
         <h2> Isidro Molina</h2>
         <div>
           <img
             src={Molina}
-            alt="Photo of Isidro and his family parrot, named Drako"
             id="pic"
           />
         </div>
@@ -41,7 +40,7 @@ class About extends React.Component {
         </p>
         <h2>Kisha J</h2>
         <div>
-          <img src={Kisha2} alt="Kisha J, Spruce and Fur, Kisha J's kitties" id="pic"/>
+          <img src={Kisha2} id="pic"/>
         </div>
         <a href="https://github.com/https://github.com/lakishaJohnson">
           More On Kisha J!
@@ -59,7 +58,6 @@ class About extends React.Component {
         <div>
           <img
             src={Justin}
-            alt="Photo of Justin celebrating his birthday with chocolate cake wearing a sombrero "
             id="pic"
           />
         </div>
@@ -73,7 +71,7 @@ class About extends React.Component {
         </p>
         <h2>Tashawnee G</h2>
         <div>
-          <img src={tashawnee} alt="Check out her work so far!" id="pic"/>
+          <img src={tashawnee} id="pic"/>
         </div>
         <a href="https://github.com/tashawneeguarriello">
           What she's been up to on Github!

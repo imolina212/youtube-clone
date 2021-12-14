@@ -78,7 +78,7 @@ class Home extends React.Component {
           </div>
         </form>
         <div className="search-results">
-          {videosToDisplay.length == 0 ? (
+          {videosToDisplay.length === 0 ? (
             <p className="search">
               No Search Results Yet!, Please submit a search above!
             </p>
