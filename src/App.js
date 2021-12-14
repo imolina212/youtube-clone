@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route , Navigate, useNavigate} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import React from "react";
 
 /** COMPONENTS */
