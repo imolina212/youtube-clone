@@ -8,12 +8,12 @@ import tashawnee from "../tashawnee.jpg";
 class About extends React.Component {
   render() {
     return (
-      <div>
+      <div id="bio-container">
         <h1 className="headings">Our Project</h1>
         <p className="bio">
           The fantastic four Dream Team joined forces to build this web app that
           responsively changes based on what YouTube video interests the user.
-          The project accesses and external API that the team integrated into
+          The project assesses an external API that the team integrated into
           the app - allowing for users to search for, view, and leave comments
           on videos. Enjoy!
         </p>
@@ -25,6 +25,7 @@ class About extends React.Component {
           <img
             src={Molina}
             alt="Photo of Isidro and his family parrot, named Drako"
+            id="pic"
           />
         </div>
         <a href={"https://github.com/imolina212"}>Check Him Out On Github!</a>
@@ -40,7 +41,7 @@ class About extends React.Component {
         </p>
         <h2>Kisha J</h2>
         <div>
-          <img src={Kisha2} alt="Kisha J, Spruce and Fur, Kisha J's kitties" />
+          <img src={Kisha2} alt="Kisha J, Spruce and Fur, Kisha J's kitties" id="pic"/>
         </div>
         <a href="https://github.com/https://github.com/lakishaJohnson">
           More On Kisha J!
@@ -59,6 +60,7 @@ class About extends React.Component {
           <img
             src={Justin}
             alt="Photo of Justin celebrating his birthday with chocolate cake wearing a sombrero "
+            id="pic"
           />
         </div>
         <a href="https://github.com/JustDDiaz">His Latest Projects! </a>
@@ -71,7 +73,7 @@ class About extends React.Component {
         </p>
         <h2>Tashawnee G</h2>
         <div>
-          <img src={tashawnee} alt="Check out her work so far!" />
+          <img src={tashawnee} alt="Check out her work so far!" id="pic"/>
         </div>
         <a href="https://github.com/tashawneeguarriello">
           What she's been up to on Github!

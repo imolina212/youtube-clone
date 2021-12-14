@@ -1,11 +1,22 @@
 .headings {
-  font-family: "Roboto" Sans Serif. YT Sans.;
+  font-family: "Roboto" "Sans Serif" "YT Sans";
 }
 
 .bio {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 20px;
 }
-img {
+#pic {
   height: 200px;
+  width: 200px;
+  object-fit: fill;
+  border-radius: 100px;
+}
+
+#bio-container {
+  background-image: url("PursuitBackground.jpeg");
+  background-size: contain;
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
