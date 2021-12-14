@@ -16,22 +16,30 @@ ul li {
 list-style-type: none;
 }
 
-
-
 ul {
   padding-left: 500px;
 }
 
 .search {
   background-color: lightgrey;
-  margin-left: 120px;
-  margin-right: 120px;
+  justify-items:right;
 }
 
 .search-bar {
   margin: 30px;
 }
 
-.links {
-  padding-left: 50px;
+.no-results {
+  display: grid;
+  grid-area: 1fr/1fr/span 2/span 1;
+  background-color: gray;
+  
+  
+}
+
+.video-card {
+  background-color: gray;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }

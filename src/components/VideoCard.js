@@ -7,11 +7,11 @@ class VideoCard extends React.Component {
     const { title, thumbnails } = this.props.vid.snippet;
 
     return (
-      <div className="video-card">
+      <div>
         <Link to={`/videos/${this.props.vid.id.videoId}`}>
-          <img src={thumbnails.default.url} alt="video thumbnails" />
+          <img src={thumbnails.high.url} alt="video thumbnails" />
         </Link>
-        <h2>{title}</h2>
+        <h4>{title}</h4>
       </div>
     );
   }

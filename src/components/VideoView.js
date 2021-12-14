@@ -5,13 +5,16 @@ import Comments from "./Comments";
 
 const VideoView = () => {
         const opts = {
-            height: '390',
-            width: '640',
+            height: '360',
+            width: '480',
         }
-        let vidParam = useParams()
+        let vidId = useParams()
     return (
         <div>
-            <YouTube videoId={vidParam.id} opts={opts}/>
+            <div>
+              <YouTube videoId={vidId.id} opts={opts}/>  
+            </div>
+            
             <hr></hr>
             <Comments />
         </div>

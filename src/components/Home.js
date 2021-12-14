@@ -35,13 +35,14 @@ class Home extends React.Component {
   fetchVideos() {
     if (this.state.userInput === 0) return;
 
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=3&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
     .then(res => res.json())
     .then((data) => {
-       console.log(data)
+    // console.log(data, "falalala")
       this.setState({
         videos: data.items,
         userInput: "",
+        results: []
       })
     }).catch((error) => {
       console.error(error)
@@ -57,11 +58,12 @@ class Home extends React.Component {
 
   render() {
     const videosToDisplay = this.state.videos.map((video, i) => {
+  
       return (
         <VideoCard vid={video} key={i} />
       )
     });
-
+// console.log(videosToDisplay, this.state.videos)
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -75,7 +77,10 @@ class Home extends React.Component {
         <button type="submit">Search</button>
             </div>
         </form>
-        {videosToDisplay.length == 0 ? <p className="search">No Search Results Yet!, Please submit a search above!</p> : videosToDisplay}
+        <div className="video-card">
+
+        {videosToDisplay.length === 0 ? <p className="search">No Search Results Yet!, Please submit a search above!</p> : videosToDisplay}
+        </div>
         </div>
     );
   }
